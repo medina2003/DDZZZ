@@ -3,35 +3,26 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        maxPerson(24,30);
-        bigApple();
-        maxPerson(20,28);
-        bigApple();
-        maxPerson(45,25);
-        bigApple();
-        maxPerson(10,-5);
-        bigRun();
-        maxPerson(11,-6);
-        bigRun();
-
-
-
+	    String value = maxPerson(20, 26);
+        String value1 = maxPerson(40, 7);
+        String value2 = maxPerson(15, 10);
+        String value3 = maxPerson(35, 26);
+        String value4 = maxPerson(80, -40);
+        System.out.println(value + "\n" + value1 + "\n" + value2 + "\n" + value3 + "\n" + value4);
     }
-    public static void maxPerson(int age,int temperature) {
-        System.out.println(age);
-        System.out.println(temperature);
+    public static String maxPerson(int age,int temperature) {
 
-    }public static void bigApple(){
-        System.out.println("можете идти гулять");
-
+        if (age > 20 && age < 45 && temperature > -20 && temperature < 30){
+            return "Можно идти гулять";
+        }else if(age < 20 && temperature > 0 && temperature < 28){
+            return "Можно идти гулять";
+        }else if (age > 45 && temperature > -10 && temperature <20 ){
+            return "Можно идти гулять";
+        }else{
+            return "Оставайтесь дома";
+        }
     }
 
-
-    public static void bigRun(){
-        System.out.println("оставайтесь дома");
-
-    }
 
 }
 
